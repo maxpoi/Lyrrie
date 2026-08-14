@@ -1,0 +1,382 @@
+:root {
+  --ink: #151619;
+  --muted: #65666c;
+  --paper: #f7f7f5;
+  --line: rgb(21 22 25 / 11%);
+  --night: #000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--night);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
+    "Segoe UI", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+.page-shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 46px 20px;
+}
+
+.support-card {
+  width: min(100%, 760px);
+  padding: clamp(28px, 6vw, 64px);
+  border: 1px solid rgb(255 255 255 / 16%);
+  border-radius: 34px;
+  background: var(--paper);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.app-icon {
+  display: block;
+  width: 72px;
+  height: 72px;
+  flex: none;
+  border: 1px solid rgb(21 22 25 / 7%);
+  border-radius: 19px;
+  box-shadow: 0 13px 30px rgb(35 34 64 / 17%),
+    0 1px 0 rgb(255 255 255 / 80%) inset;
+}
+
+.eyebrow,
+.microcopy,
+.section-kicker,
+.updated {
+  margin: 0;
+}
+
+.eyebrow {
+  font-size: 15px;
+  font-weight: 760;
+  letter-spacing: -0.01em;
+}
+
+.microcopy {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hero-copy {
+  margin-top: 42px;
+}
+
+h1 {
+  max-width: 650px;
+  margin: 0;
+  font-size: clamp(52px, 10vw, 78px);
+  font-weight: 760;
+  letter-spacing: -0.062em;
+  line-height: 0.96;
+}
+
+.lede {
+  max-width: 590px;
+  margin: 25px 0 30px;
+  color: #56575e;
+  font-size: clamp(18px, 2.4vw, 21px);
+  letter-spacing: -0.012em;
+  line-height: 1.56;
+}
+
+.copy-email {
+  display: flex;
+  width: min(100%, 500px);
+  min-height: 74px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px 13px 12px 18px;
+  border: 1px solid rgb(21 22 25 / 16%);
+  border-radius: 18px;
+  color: var(--ink);
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.copy-email:hover {
+  border-color: rgb(21 22 25 / 48%);
+  transform: translateY(-1px);
+}
+
+.copy-email:focus-visible,
+.text-link:focus-visible,
+.back-link:focus-visible {
+  outline: 3px solid rgb(21 22 25 / 24%);
+  outline-offset: 4px;
+}
+
+.email-content {
+  display: grid;
+  min-width: 0;
+  gap: 4px;
+}
+
+.email-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 720;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.email-address {
+  overflow: hidden;
+  font-size: clamp(14px, 2.5vw, 17px);
+  font-weight: 680;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.copy-action {
+  min-width: 74px;
+  flex: none;
+  padding: 12px 14px;
+  border-radius: 13px;
+  color: #fff;
+  background: var(--ink);
+  font-size: 14px;
+  font-weight: 760;
+  text-align: center;
+}
+
+.copy-status {
+  min-height: 20px;
+  margin: 8px 0 0 5px;
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.help-note {
+  margin-top: 30px;
+  padding: 22px 24px;
+  border: 1px solid var(--line);
+  border-radius: 19px;
+  background: #eeeeeb;
+}
+
+.section-kicker {
+  font-size: 13px;
+  font-weight: 780;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.help-note ul {
+  display: grid;
+  margin: 15px 0 0;
+  padding: 0;
+  gap: 9px;
+  list-style: none;
+}
+
+.help-note li {
+  position: relative;
+  padding-left: 21px;
+  color: #57585e;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.help-note li::before {
+  position: absolute;
+  top: 0.55em;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--ink);
+  box-shadow: 0 0 0 4px rgb(21 22 25 / 9%);
+  content: "";
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: 34px;
+  padding-top: 23px;
+  border-top: 1px solid var(--line);
+}
+
+.card-footer p {
+  margin: 0;
+  color: #77787e;
+  font-size: 13px;
+}
+
+.text-link,
+.back-link {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.text-link:hover,
+.back-link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+}
+
+.policy-shell {
+  align-items: start;
+}
+
+.policy-card {
+  width: min(100%, 820px);
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 34px;
+}
+
+.policy-header {
+  gap: 15px;
+}
+
+.policy-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 15px;
+}
+
+.policy-title {
+  margin-top: 36px;
+  padding-bottom: 34px;
+  border-bottom: 1px solid var(--line);
+}
+
+.policy-title h1 {
+  font-size: clamp(43px, 8vw, 67px);
+}
+
+.updated {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.policy-content section {
+  margin-top: 36px;
+}
+
+.policy-content h2 {
+  margin: 0 0 11px;
+  font-size: 21px;
+  letter-spacing: -0.025em;
+}
+
+.policy-content p {
+  margin: 0 0 13px;
+  color: #55565c;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.policy-contact {
+  padding-top: 4px;
+}
+
+.email-block-compact {
+  margin-top: 16px;
+}
+
+@media (max-width: 620px) {
+  .page-shell {
+    place-items: start center;
+    padding: 16px 12px;
+  }
+
+  .support-card {
+    padding: 29px 24px 30px;
+    border-radius: 26px;
+  }
+
+  .card-header {
+    gap: 14px;
+  }
+
+  .app-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+  }
+
+  .hero-copy {
+    margin-top: 34px;
+  }
+
+  .lede {
+    margin-top: 20px;
+  }
+
+  .copy-email {
+    min-height: 70px;
+    gap: 10px;
+    padding-left: 15px;
+  }
+
+  .copy-action {
+    min-width: 67px;
+    padding: 11px 10px;
+  }
+
+  .help-note {
+    padding: 20px;
+  }
+
+  .card-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 13px;
+  }
+
+  .policy-header .app-icon {
+    width: 54px;
+    height: 54px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .copy-email {
+    transition: none;
+  }
+}
